@@ -4,13 +4,11 @@ const routes = require('./src/routes');
 
 require('dotenv').config();
 
+const app = express();
 const port = process.env.PORT || 3000;
 
-const app = express();
-
-
-// app.use(express.json());
-// app.use(cors());
+app.use(express.json());
+app.use(cors());
 
 // Routes
 routes(app);
